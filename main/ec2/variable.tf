@@ -13,6 +13,6 @@ variable "web_subnet_id" {
 variable "web_vpc_security_group_ids" {
   
 }
-variable "web_diable_api_termination" {
+variable "web_disble_api_termination" {
  
 }
