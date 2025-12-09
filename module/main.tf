@@ -1,16 +1,16 @@
 module "ec2" {
-  source = "/Users/amitdivate/git/Module/main/ec2"
-  web_instance_type = "t3.micro"
-  web_ami = "ami-02b8269d5e85954ef"
-  web_key_name = "Oct30"
-  web_subnet_id = module.vpc_web_subnet_id
-  web_vpc_security_group_ids = module.web_vpc_security_group_ids
-  web_disable_api_termination = "false"
+  source                      = "/Users/amitdivate/git/Module/main/ec2"
+  web_instance_type           = "t3.micro"
+  web_ami                     = "ami-02b8269d5e85954ef"
+  web_key_name                = "Oct30"
+  web_subnet_id               = module.vpc_web_subnet_id
+  web_vpc_security_group_ids  = module.web_vpc_security_group_ids
+  web_disable_api_termination = false
 }
 
 module "vpc" {
-    source = "/Users/amitdivate/git/Module/main/vpc"
-    vpc_web_cidr = "10.0.0.0/16"
-    vpc_web_subnetA =  "10.0.1.0/24"
-    vpc_web_public_ip = true
+  source            = "/Users/amitdivate/git/Module/main/vpc"
+  vpc_web_cidr      = "10.0.0.0/16"
+  vpc_web_subnetA   = "10.0.1.0/24"
+  vpc_web_public_ip = true
 }
