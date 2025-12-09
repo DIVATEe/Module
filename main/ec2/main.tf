@@ -4,7 +4,7 @@ resource "aws_instance" "web" {
   key_name = var.web_key_name
   subnet_id = var.web_subnet_id
   vpc_security_group_ids = [  ]
-  disable_api_termination = var.web_disble_api_termination
+  disable_api_termination = var.web_disable_api_termination
   user_data = <<-EOF
                 #!/bin/bash
                 sudo apt update -y
