@@ -3,8 +3,8 @@ module "ec2" {
   web_instance_type           = "t3.micro"
   web_ami                     = "ami-02b8269d5e85954ef"
   web_key_name                = "Oct30"
-  web_subnet_id               = module.vpc_web_subnetA
-  web_vpc_security_group_ids  = module.vpc_web_sg
+  web_subnet_id               = module.vpc.vpc_web_subnet_id
+  web_vpc_security_group_ids  = module.vpc.vpc_web_sg
   web_disable_api_termination = false
 }
 
